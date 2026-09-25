@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 public partial class Ejercicios
 {
 	// You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
@@ -10,29 +11,24 @@ public partial class Ejercicios
 	//https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/csharp
 	public int[] SortArray(int[] array)
 	{
-		int[] original = new int[array.Length];
-		int[] result = new int[array.Length];
-		array.CopyTo(original, 0);
-		Array.Sort(array);
-		for (var i = 0; i < original.Length; i++)
+		var impares = array.Where(n => n % 2 != 0).OrderBy(n => n).ToArray();
+		var pares = array.Where(n => n % 2 == 0).ToArray();
+		int[] resultado = new int[array.Length];
+		int contadorPar = 0;
+		int contadoImpar = 0;
+		for(var i = 0; i < array.Length; i++)
 		{
-			int esPar = original[i] % 2;
-			if(esPar == 0)
+			if(array[i] % 2 == 0)
 			{
-				result[i] = original[i];
+				resultado[i] = pares[contadorPar];
+				contadorPar++;	
 			}
 			else
 			{
-				result[i] = -1;
+				resultado[i] = impares[contadoImpar];
+				contadoImpar++;	
 			}
 		}
-		for (var i = 0; i < result.Length; i++)
-		{
-			if(result[i] == -1)
-			{
-				result[i] = array[i];
-			}
-		}
-		return result;
+		return resultado;
 	}
 }
