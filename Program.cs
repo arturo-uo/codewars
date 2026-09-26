@@ -5,4 +5,4 @@
 // {
 // 	Console.WriteLine(res[i]);
 // }
-Console.WriteLine(ejercicios.Determinant(new int[][] { new [] { 1, 3 }, new [] { 2, 5 } }));
+Console.WriteLine(ejercicios.Alphanumeric("   "));
