@@ -31,7 +31,18 @@ public partial class Ejercicios
 	// det(M) = a * det(a_minor) - b * det(b_minor) + c * det(c_minor) - d * det(d_minor)
 	public int Determinant(int[][] matrix)
 	{
+		int resultado = 0;
 		// Your code here!
-		return 0;
+		if(matrix.Length == 1)
+			return matrix[0][0];
+		if(matrix.Length == 2)
+			resultado = (matrix[0][0] * matrix[1][1]) - (matrix[1][0] * matrix[0][1]);
+		if(matrix.Length > 2)
+		{
+			int longitud = matrix.Length;
+			int[][] copia = new int[longitud][];
+			matrix.CopyTo(copia, 0);
+		}
+		return resultado;
 	}
 }
