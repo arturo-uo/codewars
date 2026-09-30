@@ -17,11 +17,11 @@ public partial class Ejercicios
 		{
 			numeros[i] = nums[i].ToString();
 		}
-		var res = numeros.ToList().OrderBy(r => r).ToArray();
+		var res = numeros.ToList().OrderByDescending(r => r).ToArray();
 		string resultado = string.Empty;
-		for (var i = 0; i < numeros.Length; i++)
+		for (var i = 0; i < res.Length; i++)
 		{
-			resultado += numeros[i];
+			resultado += res[i];
 		}
 		int numeroResultado = int.Parse(resultado);
 		// Bust a move right here
