@@ -20,8 +20,7 @@ public partial class Ejercicios
 			{
 				if (i == 0)
 				{
-					//if(!Char.IsUpper(chars[i]))
-						resultado += chars[i];
+					resultado += chars[i];
 				}
 				else
 				{
