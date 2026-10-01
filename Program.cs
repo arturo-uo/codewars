@@ -11,4 +11,4 @@
 //            new []{4, 5, 6},
 //            new []{7, 8, 9}
 //        };
-Console.WriteLine(ejercicios.ToCamelCase("the-stealth-warrior"));
+Console.WriteLine(ejercicios.MoveZeroes(new int[] {1, 2, 0, 1, 0, 1, 0, 3, 0, 1}));
