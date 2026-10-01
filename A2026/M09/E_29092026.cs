@@ -10,7 +10,7 @@ public partial class Ejercicios
 // 1                 -->  "1"
     public string ToUnderscore(int str) 
   {
-    throw new NotImplementedException();
+    return str.ToString();
   }
 
   public string ToUnderscore(string str) 
