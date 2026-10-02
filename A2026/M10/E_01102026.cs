@@ -11,7 +11,7 @@ public partial class Ejercicios
 	// IsPerfectPower(5) => null
 	// IsPerfectPower(8) => (2, 3)
 	// IsPerfectPower(9) => (3, 2)
-	public static (int, int)? IsPerfectPower(int n)
+	public (int, int)? IsPerfectPower(int n)
 	{
 		int power = 0;
 		int sqrt = (int)Math.Sqrt(n) + 1;
