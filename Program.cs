@@ -11,4 +11,4 @@
 //            new []{4, 5, 6},
 //            new []{7, 8, 9}
 //        };
-Console.WriteLine(ejercicios.IsPerfectPower(1));
+Console.WriteLine(ejercicios.ParseInt("one"));
